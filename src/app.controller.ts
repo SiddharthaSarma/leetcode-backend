@@ -6,7 +6,12 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello() {
-    return this.appService.getHello();
+  getQuestions() {
+    return this.appService.getQuestions();
+  }
+
+  @Get('/likesanddislikes')
+  getLikesAndDislikes() {
+    return this.appService.getLikesAndDislikesFromDisk();
   }
 }
