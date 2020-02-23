@@ -14,4 +14,9 @@ export class AppController {
   getLikesAndDislikes() {
     return this.appService.getLikesAndDislikesFromDisk();
   }
+
+  @Get('/update')
+  updateList() {
+    return this.appService.updateLikesAndDislikes();
+  }
 }
